@@ -600,14 +600,30 @@
 
       <!-- Bottom -->
       <div class="footer-bottom" style="margin-top:20px; padding:20px; text-align:center; font-size:14px; color:#eee;">
-      <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
-      <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-      <p>
-         Pravin Mishra Portfolio v1.0 — Deployed on
-         <span id="deployDate"></span> — By Samkeliso Dube
-      </p>
-        <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate">04/02/2026</span> By Samkeliso Dube </Student></p>
+        <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
+        <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
+        <p>
+          Pravin Mishra Portfolio v1.0 — Deployed on 
+          <span id="deployDate"></span> — By Samkeliso Dube
+        </p>
       </div>
+
+      <script>
+      document.addEventListener("DOMContentLoaded", function () {
+       const d = new Date();
+       const el = document.getElementById("deployDate");
+       if (el) {
+          el.innerText = d.toLocaleDateString('en-GB', {
+           day: '2-digit',
+           month: 'short',
+           year: 'numeric'
+          });
+         }
+       });
+      </script>
+
+
+
 
 
     </div>
