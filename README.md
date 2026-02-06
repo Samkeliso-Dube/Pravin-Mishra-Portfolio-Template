@@ -40,3 +40,22 @@ Add this line (example):
 ```
 
 ✅ This proof must be visible in your browser screenshot submission.
+
+## Footer Version & Deploy Date
+
+The footer displays:
+Pravin Mishra Portfolio v1.0 — Deployed on <current date> — By Samkeliso
+
+The deploy date is generated dynamically using JavaScript, so it always shows the current date when the site loads.
+
+This change was implemented as part of a 5-day Jira sprint and deployed to the EC2 instance.
+
+Pravin Mishra Portfolio v1.0 — Deployed on ```<span id="deployDate"></span>``` — By Samkeliso
+
+```
+<script>
+const d = new Date();
+document.getElementById("deployDate").innerText =
+d.toLocaleDateString('en-GB', { day:'2-digit', month:'short', year:'numeric' });
+</script>
+```
